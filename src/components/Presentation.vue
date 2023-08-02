@@ -71,7 +71,7 @@ strong {
 }
 
 .presentation-block {
-    margin-top: 70px;
+    margin-top: 60px;
     margin-left: 30px;
     display: flex;
     flex-direction: row;
@@ -90,11 +90,17 @@ strong {
 
 .Photo-De-Profil:hover {
     cursor: zoom-in;
+    background-color: #9ac8eb;
+}
+
+img:hover{
+    background-color: #9ac8eb;
 }
 
 .presentation {
     order: 2;
     overflow: hidden;
     padding-top: 15px;
+    font-size: 18px;
 }
 </style>

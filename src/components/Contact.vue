@@ -1,7 +1,7 @@
 <template>
     <div class="body">
         <h2 id="contact_title">Contact</h2>
-        <form method="post" id="contact_form" action="contact.php">
+        <form method="post" id="contact_form">
             <div id="id">
                 <div id="first-name">
                     <label for="first-name_box" id="first-name_label">Prénom :</label>
@@ -101,7 +101,7 @@ button {
 #submit {
     background-color: #feeaa1;
     font-size: 16px;
-    margin-left: 90%;
+    margin-left: 89%;
     margin-top: 30px;
     height: 30px;
     width: 100px;
@@ -132,7 +132,7 @@ span {
 
 input {
     border-radius: 10px;
-    height: 30px;
+    height: 35px;
     width: 200px;
     padding: 5px;
     font-size: medium;
