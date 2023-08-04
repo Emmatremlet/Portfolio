@@ -1,33 +1,36 @@
 <script setup>
+import { RouterLink, RouterView } from 'vue-router'
+import App from '../App.vue'
+
 
 </script>
 
 <template>
   <header>
     <div class="header">
-      <a href="#body">
+      <a href=".header">
         <div class="logo">
-          <img src="../../Images/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
+          <img src="/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
             class="logo-img">
         </div>
       </a>
       <div class="name-job">
-        <p class="name">Emma Tremlet</p>
+        <strong>Emma Tremlet</strong> <br>
         <i>Développeuse Web</i>
       </div>
     </div>
     <div class="presentation-header">
-      <a href="#presentation_title">
+      <a href="./Presentation.vue">
         <nav class="link"> Présentation </nav>
       </a>
     </div>
     <div class="creation-header">
-      <a href="#creation_title">
+      <a href="./Creations.vue">
         <nav class="link"> Créations </nav>
       </a>
     </div>
     <div class="contact-header">
-      <a href="#contact_title">
+      <a href="./Contact.vue">
         <nav class="link"> Contact </nav>
       </a>
     </div>
@@ -35,29 +38,20 @@
 </template>
 
 <style scoped>
-@font-face {
-  font-family: "Manrope";
-  src: url("../../Fonts/Manrope-VariableFont_wght_1.woff");
-  src: url("../../Fonts/Manrope-VariableFont_wght_1.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Edu_Sa_Beginner";
-  src: url("../../Fonts/EduSABeginner-VariableFont_wght_1.woff");
-  src: url("../../Fonts/EduSABeginner-VariableFont_wght_1.ttf") format("truetype");
-}
-
 
 header {
   background-color: #feeaa1;
   font-size: 17px;
-  width: 940px;
+  width: 990px;
+  height: 70px;
   padding: 5px;
+  margin: 0;
   cursor: default;
   position: fixed;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+  align-items:  center;
 }
 
 
@@ -68,9 +62,6 @@ header {
   justify-content: space-around;
 }
 
-.name {
-  font-weight: 700;
-}
 
 .presentation-header {
   order: 2;
@@ -85,13 +76,15 @@ header {
 }
 
 .link {
-  padding-top: 4px;
+  padding: 0;
+  text-decoration: none;
+  margin: 0;
 }
 
 .logo-img {
   order: 1;
   width: 50px;
-  margin-top: 3px;
+  margin-top: 2px;
   margin-right: 20px;
   border: 3px #dbc2a4;
   box-shadow: 0px 0px 10px #dbc2a4;
@@ -100,19 +93,16 @@ header {
 
 .name-job {
   order: 2;
-  margin-top: 5px;
-}
-
-nav {
-  margin-top: 10px;
-  color: black;
+  margin-top: 6px;
 }
 
 .header a {
   text-decoration: none;
+  margin-top: 5px;
+  color: black;
 }
 
-nav:hover {
+a:hover {
   text-decoration: underline;
 }
 </style>

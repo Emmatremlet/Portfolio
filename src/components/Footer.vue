@@ -15,24 +15,9 @@
 </template>
 
 <style scoped>
-@font-face {
-  font-family: "Manrope";
-  src: url("../../Fonts/Manrope-VariableFont_wght_1.woff");
-  src: url("../../Fonts/Manrope-VariableFont_wght_1.ttf") format("truetype");
-}
-
-@font-face {
-  font-family: "Edu_Sa_Beginner";
-  src: url("../../Fonts/EduSABeginner-VariableFont_wght_1.woff");
-  src: url("../../Fonts/EduSABeginner-VariableFont_wght_1.ttf") format("truetype");
-}
 
 .body {
   order: 4;
-  font-family: "Manrope", sans-serif;
-  line-height: 1.5;
-  cursor: default;
-  color: black;
   display: flex;
   flex-direction: column;
   justify-content: center;

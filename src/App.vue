@@ -7,23 +7,40 @@ import NotFound from './components/NotFound.vue'
 import Presentation from './components/Presentation.vue'
 import Contact from './components/Contact.vue'
 import Creations from './components/Creations.vue'
+
+</script>
+
+<script>
+export default {
+  name: 'App',
+  components: {
+    Header,
+    Presentation,
+    Creations, 
+    Modal, 
+    Contact,
+    Footer,
+    NotFound
+  }
+  
+}
 </script>
 
 <template>
-  <div id="body">
+  <div class="body">
     <Header></Header>
     <div id="welcome">
-      <Presentation></Presentation>
+      <Presentation/>
       <br>
       <br>
       <br>
       <br>
-      <Creations></Creations>
+      <Creations/>
       <br>
       <br>
       <br>
       <br>
-      <Contact></Contact>
+      <Contact/>
     </div>
     <br>
     <br>
@@ -105,7 +122,7 @@ import Creations from './components/Creations.vue'
   </div>
 </template>
 
-<style scoped>
+<style>
 @font-face {
   font-family: "Manrope";
   src: url("../Fonts/Manrope-VariableFont_wght_1.woff");
@@ -118,9 +135,9 @@ import Creations from './components/Creations.vue'
   src: url("../Fonts/EduSABeginner-VariableFont_wght_1.ttf") format("truetype");
 }
 
-#body {
+#app {
   width: 1000px;
-  margin: 0 10%;
+  margin: 0 auto;
   padding: 0 30px;
   padding-bottom: 20px;
   color: black;
@@ -132,6 +149,13 @@ import Creations from './components/Creations.vue'
   flex-direction: column;
   flex-basis: auto;
   justify-content: space-between;
+}
+.body {
+    font-family: "Manrope", sans-serif;
+    line-height: 1.5;
+    cursor: default;
+    font-size: 17px;
+    color: black;
 }
 
 h1 {
@@ -146,12 +170,28 @@ h2 {
   font-family: "Edu_Sa_Beginner", sans-serif;
 }
 
+strong{
+  font-weight: 700;
+}
+
 #welcome {
   order: 1;
   padding: 20px;
 }
 
 
+a {
+  color: black;
+  text-decoration: none;
+  cursor:pointer;
+  margin: 0 10px;
+}
+
+a:hover {
+  background-color: #9ac8eb;
+  text-decoration: underline;
+  color: plum;
+}
 
 .modal-container-specifications {
   position: fixed;

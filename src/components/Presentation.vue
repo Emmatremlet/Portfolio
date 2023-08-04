@@ -26,47 +26,14 @@
 </template>
 
 <style scoped>
-@font-face {
-    font-family: "Manrope";
-    src: url("../../Fonts/Manrope-VariableFont_wght_1.woff");
-    src: url("../../Fonts/Manrope-VariableFont_wght_1.ttf") format("truetype");
-}
 
-@font-face {
-    font-family: "Edu_Sa_Beginner";
-    src: url("../../Fonts/EduSABeginner-VariableFont_wght_1.woff");
-    src: url("../../Fonts/EduSABeginner-VariableFont_wght_1.ttf") format("truetype");
-}
-
-.body {
-    font-family: "Manrope", sans-serif;
-    line-height: 1.5;
-    cursor: default;
-    font-size: 17px;
-    color: black;
-}
-
-h1 {
-    font-family: "Edu_Sa_Beginner", sans-serif;
-    padding-top: 40px;
-    font-weight: 700;
-}
-
-h2 {
-    background-color: #ff9cb6;
-    line-height: 1;
-    padding: 5px;
-    font-weight: 700;
-    color: black;
-    font-family: "Edu_Sa_Beginner", sans-serif;
-}
-
-strong {
-    font-weight: 700;
+.body{
+    margin-top: 70px;
 }
 
 .name {
     margin: 0 auto;
+    padding-top: 30px;
     width: 200px;
 }
 
