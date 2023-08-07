@@ -10,12 +10,12 @@ export default {
     },
     data() {
         return {
-            showModal: false
+            showModal1: false
         }
     },
     methods: {
-        toggleModal() {
-            this.showModal = !this.showModal
+        toggleModal1() {
+            this.showModal1 = !this.showModal1
         }
     }
 }
@@ -26,15 +26,15 @@ export default {
         <h2 id="creation_title">Creations</h2>
         <div id="creations">
             <div id="CV">
-                <div v-if="showModal" >
-                    <Modal @close="toggleModal"/>
-                </div>
-                <button type="button" class="modal-btn modal-trigger-CV" @click="toggleModal">
+                <button type="button" class="modal-btn modal-trigger-CV" @click="toggleModal1">
                     <img src=../../Images/CV.png alt="Photo d'un CV réalisé en site web" id="CV_image">
                     <h3 id="Cv_title">Curriculum Vitae</h3>
                 </button>
+                <div v-if="showModal1" >
+                    <Modal @close1="toggleModal1"/>
+                </div>
             </div>
-            <div id="specifications">
+            <!-- <div id="specifications">
                 <button class="modal-btn modal-trigger-specifications">
                     <img src=../../Images/CahierDesCharges.png
                         alt="Photo d'un extrait d'un cahier des charges d'un projet fictif" id="specifications_image">
@@ -43,11 +43,9 @@ export default {
                 <div v-if="showModal">
                     <Modal>
 
-                        <template v-slot:header>
-                            <h2>Cahier des Charges fictif</h2>
-                        </template>
+                        <template #title>Cahier des Charges fictif</template>
 
-                        <template v-slot:body>
+                        <template #slider>
                             <div class="slider">
                                 <img class="img-modal" src=../../Images/CahierDesCharges.png
                                     alt="Photo d'un extrait d'un cahier des charges d'un projet fictif">
@@ -62,7 +60,7 @@ export default {
                             </div>
                         </template>
 
-                        <template v-slot:footer>
+                        <template #details>
                             <p class="creation-date date-specifications"> <i>Fait le 05/07/2023</i> </p>
                             <div class="technologies-used">
                                 <h4>Technologies utilisées :</h4>
@@ -79,7 +77,7 @@ export default {
                 </div>
             </div>
             <div id="comments_space">
-                <button class="modal-btn modal-trigger-comments-space" @click="showModal">
+                <button class="modal-btn modal-trigger-comments-space">
                     <img src=../../Images/EspaceDeComments.png alt="Photo d'un espace de commentaires dynamique"
                         id="comments_space_image">
                     <h3 id="comments_space_title">Espace de commentaires dynamique</h3>
@@ -122,8 +120,8 @@ export default {
                                 Github</a>
                         </template>
                     </Modal>
-                </div>
-            </div>
+                </div> -->
+            <!-- </div> -->
         </div>
 
     </div>

@@ -2,45 +2,54 @@
 export default {
   name: 'Modal',
   methods: {
-    closeModal() {
-      this.$emit('close')
-    }
+    closeModal1() {
+      this.$emit('close1')
+    },
   }
 }
 </script>
 
 <template>
-  <div class="modal-container modal">
-    <div class="overlay modal-trigger" @click="closeModal"></div>
+  <div class="modal-container">
+    <div class="overlay modal-trigger" @click="closeModal1"></div>
     <div class="modal">
-      <button class="close modal-trigger" @click="closeModal">X</button>
-      <slot name="header">
-        <h2>Curriculum Vitae Emma Tremlet</h2>
-      </slot>
+      <button class="close modal-trigger" @click="closeModal1">X</button>
+      <h2>
+        <slot name="title">
+          Curriculum Vitae Emma Tremlet
+        </slot>
+      </h2>
       <div class="body-modal">
-        <slot name="body" class="slider-container slider-CV">
-          <!-- <div class="slider">
+        <div class="slider container slider-CV">
+          <div class="slider">
+            <slot name="slider">
               <img class="img-modal" src=../../Images/CV.png alt="Photo d'un CV réalisé en site web">
               <img class="img-modal" src=../../Images/CV2.png alt="Photo d'un CV réalisé en site web">
               <img class="img-modal" src=../../Images/HTML_CV.png alt="Photo du code HTML d'un CV réalisé en site web">
               <img class="img-modal" src=../../Images/CSS_CV.png alt="Photo du code CSS d'un CV réalisé en site web">
               <img class="img-modal" src=../../Images/CV.png alt="Photo d'un CV réalisé en site web">
-            </div> -->
-        </slot>
-        <slot name="footer" class="details-modal-CV">
-          <p class="creation-date date-CV"><i>Fait le 27/06/2023</i></p>
-          <div class="technologies-used">
-            <h4>Technologies utilisées :</h4>
-            <ul>
-              <li>HTML</li>
-              <li>CSS</li>
-              <li>GitHub</li>
-            </ul>
+            </slot>
           </div>
-          <br>
-          <a class="link CV-link" href="https://github.com/Emmatremlet/CV-Emma-TREMLET">Lien
-            Github</a>
-        </slot>
+        </div>
+        <div class="details-modal">
+          <slot name="details" class="details-modal">
+            <br>
+            <p class="creation-date date-CV"><i>Fait le 27/06/2023</i></p> <br> <br>
+            <div class="technologies-used">
+              <h4>Technologies utilisées :</h4>
+              <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>GitHub</li>
+              </ul>
+            </div>
+            <br>
+            <a href="https://github.com/Emmatremlet/CV-Emma-TREMLET" class="link">
+              <img src=../../Images/github.svg alt="Profil GitHub Emma TREMLET" class="github"> <br>
+              <p class="github-title">GitHub</p>
+            </a>
+          </slot>
+        </div>
       </div>
     </div>
   </div>
@@ -60,11 +69,11 @@ export default {
   align-items: center;
   top: 0;
   left: 0;
-  width: 100px;
+  width: 100vw;
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  transition: visibility 0.4s;
+  /* transition: visibility 0.4s; */
 }
 
 .overlay {
@@ -86,8 +95,8 @@ export default {
   background: #fff;
   border-radius: 5px;
   position: absolute;
-  top: 50%;
-  left: 45%;
+  top: 55%;
+  left: 49%;
   transform: translate(-50%, calc(-50% - 50px));
   transition: opacity 0.4s ease-out, transform 0.4s ease-out;
 }
@@ -106,7 +115,8 @@ export default {
 }
 
 .modal h2 {
-  margin-bottom: 10px;
+  margin: 10px 0;
+  width: 780px;
 }
 
 .body-modal {
@@ -124,6 +134,7 @@ export default {
   padding-top: 20px;
   color: #4ba1e3;
   text-decoration: underline;
+  margin-left: 85px;
 }
 
 li {
@@ -134,7 +145,7 @@ li {
   border: solid;
   border-color: #ff9cb6;
   padding: 20px;
-  padding-top: 0px;
+  padding-top: 10px;
   margin-top: 10px;
 }
 
@@ -161,6 +172,16 @@ a:hover {
   background-color: #fff;
   text-decoration: underline;
   color: plum;
+}
+
+.github {
+  width: 35px;
+  margin: 10px;
+  opacity: 1;
+}
+
+.github:hover {
+  opacity: 0.5;
 }
 
 /* 
