@@ -14,7 +14,7 @@
             </div>
             <div id="email">
                 <label for="email_box" id="email_label">Adresse e-mail :</label>
-                <input type="email" id="email_box" name="email" placeholder="NomPrenom@gmail.com" required>
+                <input type="email" id="email_box" name="email" placeholder="NomPrenom@gmail.com" key="email-input" required>
             </div>
             <div id="object">
                 <label for="object_box" id="object_label"> Objet :</label>

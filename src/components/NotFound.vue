@@ -6,17 +6,17 @@ import Footer from './Footer.vue';
 
 <template>
     <div class="body">
-        <Header/>
+        <Header></Header>
 
         <div class="logo-404">
-            <img src="./Images/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
+            <img src="../assets/Images/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
                 class="logo">
         </div>
 
         <h1 class="not-found">404 — Not Found</h1>
 
 
-        <Footer/>
+        <Footer></Footer>
     </div>
 </template>
 

@@ -2,15 +2,15 @@
   <div class="body">
     <div class="networks">
       <a href="https://www.linkedin.com/in/emma-tremlet/">
-        <img src=../../Images/linkedin.png alt="Profil Linkedin Emma TREMLET" class="image"> <br>
+        <img src=../assets/Images/linkedin.png alt="Profil Linkedin Emma TREMLET" class="image"> <br>
         <p class="linkedin">Linkedin</p>
       </a>
       <a href="https://github.com/Emmatremlet">
-        <img src=../../Images/github.png alt="Profil GitHub Emma TREMLET" class="image"> <br>
+        <img src=../assets/Images/github.png alt="Profil GitHub Emma TREMLET" class="image"> <br>
         <p class="github">GitHub</p>
       </a>
     </div>
-    <p class="maj">Mis à jour le 02/08/2023</p>
+    <p class="maj">Mis à jour le 08/08/2023</p>
   </div>
 </template>
 

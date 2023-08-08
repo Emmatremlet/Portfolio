@@ -1,24 +1,12 @@
 <script setup>
-import Modal from './Modal.vue';
-</script>
 
-<script>
-export default {
-    name: 'Creations',
-    components: {
-        Modal
-    },
-    data() {
-        return {
-            showModal1: false
-        }
-    },
-    methods: {
-        toggleModal1() {
-            this.showModal1 = !this.showModal1
-        }
-    }
+let showModal1 = false
+
+function toggleModal1() {
+    this.showModal1 = !this.showModal1
 }
+
+
 </script>
 
 <template>
@@ -27,16 +15,16 @@ export default {
         <div id="creations">
             <div id="CV">
                 <button type="button" class="modal-btn modal-trigger-CV" @click="toggleModal1">
-                    <img src=../../Images/CV.png alt="Photo d'un CV réalisé en site web" id="CV_image">
+                    <img src=../assets/Images/CV.png alt="Photo d'un CV réalisé en site web" id="CV_image">
                     <h3 id="Cv_title">Curriculum Vitae</h3>
                 </button>
-                <div v-if="showModal1" >
-                    <Modal @close1="toggleModal1"/>
+                <div v-if="showModal1">
+                    <Modal @close1="toggleModal1" />
                 </div>
             </div>
             <!-- <div id="specifications">
                 <button class="modal-btn modal-trigger-specifications">
-                    <img src=../../Images/CahierDesCharges.png
+                    <img src=../assets/Images/CahierDesCharges.png
                         alt="Photo d'un extrait d'un cahier des charges d'un projet fictif" id="specifications_image">
                     <h3 id="specifications_title">Cahier des charges fictif</h3>
                 </button>
@@ -47,15 +35,15 @@ export default {
 
                         <template #slider>
                             <div class="slider">
-                                <img class="img-modal" src=../../Images/CahierDesCharges.png
+                                <img class="img-modal" src=../assets/Images/CahierDesCharges.png
                                     alt="Photo d'un extrait d'un cahier des charges d'un projet fictif">
-                                <img class="img-modal" src=../../Images/CahierDesCharges2.png
+                                <img class="img-modal" src=../assets/Images/CahierDesCharges2.png
                                     alt="Photo d'un extrait d'un cahier des charges d'un projet fictif">
-                                <img class="img-modal" src=../../Images/CahierDesCharges3.png
+                                <img class="img-modal" src=../assets/Images/CahierDesCharges3.png
                                     alt="Photo d'un extrait d'un cahier des charges d'un projet fictif">
-                                <img class="img-modal" src=../../Images/CahierDesCharges4.png
+                                <img class="img-modal" src=../assets/Images/CahierDesCharges4.png
                                     alt="Photo d'un extrait d'un cahier des charges d'un projet fictif">
-                                <img class="img-modal" src=../../Images/CahierDesCharges.png
+                                <img class="img-modal" src=../assets/Images/CahierDesCharges.png
                                     alt="Photo d'un extrait d'un cahier des charges d'un projet fictif">
                             </div>
                         </template>
@@ -70,7 +58,7 @@ export default {
                             </div>
                             <br>
                             <a class="link specifications-link"
-                                href="../../Documents/Cahier_des_charges_La_Socketterie.pdf">Lien
+                                href="../assets/Documents/Cahier_des_charges_La_Socketterie.pdf">Lien
                                 PDF</a>
                         </template>
                     </Modal>
@@ -78,7 +66,7 @@ export default {
             </div>
             <div id="comments_space">
                 <button class="modal-btn modal-trigger-comments-space">
-                    <img src=../../Images/EspaceDeComments.png alt="Photo d'un espace de commentaires dynamique"
+                    <img src=../assets/Images/EspaceDeComments.png alt="Photo d'un espace de commentaires dynamique"
                         id="comments_space_image">
                     <h3 id="comments_space_title">Espace de commentaires dynamique</h3>
                 </button>
@@ -90,15 +78,15 @@ export default {
 
                         <template v-slot:body>
                             <div class="slider">
-                                <img class="img-modal" src=../../Images/EspaceDeComments.png
+                                <img class="img-modal" src=../assets/Images/EspaceDeComments.png
                                     alt="Photo d'un espace de commentaires dynamique">
-                                <img class="img-modal" src=../../Images/EspaceDeComments2.png
+                                <img class="img-modal" src=../assets/Images/EspaceDeComments2.png
                                     alt="Photo d'un espace de commentaires dynamique">
-                                <img class="img-modal" src=../../Images/EspaceDeComments3.png
+                                <img class="img-modal" src=../assets/Images/EspaceDeComments3.png
                                     alt="Photo du code JS d'un espace de commentaires dynamique">
-                                <img class="img-modal" src=../../Images/EspaceDeComments4.png
+                                <img class="img-modal" src=../assets/Images/EspaceDeComments4.png
                                     alt="Photo du code JS d'un espace de commentaires dynamique">
-                                <img class="img-modal" src=../../Images/EspaceDeComments.png
+                                <img class="img-modal" src=../assets/Images/EspaceDeComments.png
                                     alt="Photo d'un espace de commentaires dynamique">
                             </div>
                         </template>
@@ -126,6 +114,7 @@ export default {
 
     </div>
 </template>
+
 
 <style scoped>
 strong {

@@ -1,14 +1,9 @@
-<script setup>
-import { RouterLink, RouterView } from 'vue-router'
-import App from '../App.vue'
 
-
-</script>
 
 <template>
   <header>
     <div class="header">
-      <a href=".header">
+      <a href="#welcome">
         <div class="logo">
           <img src="/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
             class="logo-img">
@@ -20,17 +15,17 @@ import App from '../App.vue'
       </div>
     </div>
     <div class="presentation-header">
-      <a href="./Presentation.vue">
+      <a href="#welcome">
         <nav class="link"> Présentation </nav>
       </a>
     </div>
     <div class="creation-header">
-      <a href="./Creations.vue">
+      <a href="#creation-block">
         <nav class="link"> Créations </nav>
       </a>
     </div>
     <div class="contact-header">
-      <a href="./Contact.vue">
+      <a href="#contact">
         <nav class="link"> Contact </nav>
       </a>
     </div>
@@ -99,10 +94,11 @@ header {
 .header a {
   text-decoration: none;
   margin-top: 5px;
-  color: black;
+  background-color: #feeaa1;
 }
 
 a:hover {
   text-decoration: underline;
+  color: black;
 }
 </style>

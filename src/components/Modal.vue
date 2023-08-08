@@ -1,19 +1,15 @@
-<script>
-export default {
-  name: 'Modal',
-  methods: {
-    closeModal1() {
-      this.$emit('close1')
-    },
-  }
+<script setup>
+
+function closeModal() {
+  this.$emit('close')
 }
 </script>
 
 <template>
   <div class="modal-container">
-    <div class="overlay modal-trigger" @click="closeModal1"></div>
+    <div class="overlay modal-trigger" @click="closeModal"></div>
     <div class="modal">
-      <button class="close modal-trigger" @click="closeModal1">X</button>
+      <button class="close modal-trigger" @click="closeModal">X</button>
       <h2>
         <slot name="title">
           Curriculum Vitae Emma Tremlet
@@ -23,11 +19,11 @@ export default {
         <div class="slider container slider-CV">
           <div class="slider">
             <slot name="slider">
-              <img class="img-modal" src=../../Images/CV.png alt="Photo d'un CV réalisé en site web">
-              <img class="img-modal" src=../../Images/CV2.png alt="Photo d'un CV réalisé en site web">
-              <img class="img-modal" src=../../Images/HTML_CV.png alt="Photo du code HTML d'un CV réalisé en site web">
-              <img class="img-modal" src=../../Images/CSS_CV.png alt="Photo du code CSS d'un CV réalisé en site web">
-              <img class="img-modal" src=../../Images/CV.png alt="Photo d'un CV réalisé en site web">
+              <img class="img-modal" src=../assets/Images/CV.png alt="Photo d'un CV réalisé en site web">
+              <img class="img-modal" src=../assets/Images/CV2.png alt="Photo d'un CV réalisé en site web">
+              <img class="img-modal" src=../assets/Images/HTML_CV.png alt="Photo du code HTML d'un CV réalisé en site web">
+              <img class="img-modal" src=../assets/Images/CSS_CV.png alt="Photo du code CSS d'un CV réalisé en site web">
+              <img class="img-modal" src=../assets/Images/CV.png alt="Photo d'un CV réalisé en site web">
             </slot>
           </div>
         </div>
@@ -45,7 +41,7 @@ export default {
             </div>
             <br>
             <a href="https://github.com/Emmatremlet/CV-Emma-TREMLET" class="link">
-              <img src=../../Images/github.svg alt="Profil GitHub Emma TREMLET" class="github"> <br>
+              <img src=../assets/Images/github.svg alt="Profil GitHub Emma TREMLET" class="github"> <br>
               <p class="github-title">GitHub</p>
             </a>
           </slot>
@@ -82,6 +78,7 @@ export default {
   position: absolute;
   width: 100%;
   height: 100%;
+  cursor:pointer;
   background: #333333d3;
   /* transition: opacity 0.4s 0.2s ease-out; */
 }

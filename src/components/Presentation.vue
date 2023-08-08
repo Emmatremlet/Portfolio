@@ -1,11 +1,13 @@
 <template>
     <div class="body">
         <h2 id="presentation_title">Presentation</h2>
+        <br>
+        <br>
         <div class="name">
             <h1>Emma Tremlet</h1>
         </div>
         <div class="presentation-block">
-            <a href='#' onclick="popup()"><img src=../../Images/Photo_de_profil.JPG
+            <a href='../assets/Images/Photo_de_profil.JPG'><img src=../assets/Images/Photo_de_profil.JPG
                     alt="Photo d'une femme chatain qui sourit" class="Photo-De-Profil"></a>
             <p class="presentation">
                 Suite à ma formation en ligne,
