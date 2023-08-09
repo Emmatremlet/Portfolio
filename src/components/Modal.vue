@@ -1,7 +1,10 @@
 <script setup>
+import { defineEmits } from 'vue'
+
+const emit = defineEmits (["close"])
 
 function closeModal() {
-  this.$emit('close')
+  emit('close')
 }
 </script>
 
@@ -16,7 +19,7 @@ function closeModal() {
         </slot>
       </h2>
       <div class="body-modal">
-        <div class="slider container slider-CV">
+        <div class="slider-container slider-CV">
           <div class="slider">
             <slot name="slider">
               <img class="img-modal" src=../assets/Images/CV.png alt="Photo d'un CV réalisé en site web">
@@ -69,7 +72,6 @@ function closeModal() {
   height: 100vh;
   margin: 0 auto;
   padding: 0;
-  /* transition: visibility 0.4s; */
 }
 
 .overlay {
@@ -80,11 +82,9 @@ function closeModal() {
   height: 100%;
   cursor:pointer;
   background: #333333d3;
-  /* transition: opacity 0.4s 0.2s ease-out; */
 }
 
 .modal {
-  /* opacity: 0; */
   width: 95%;
   max-width: 800px;
   min-width: 300px;
@@ -92,10 +92,9 @@ function closeModal() {
   background: #fff;
   border-radius: 5px;
   position: absolute;
-  top: 55%;
+  top: 48%;
   left: 49%;
-  transform: translate(-50%, calc(-50% - 50px));
-  transition: opacity 0.4s ease-out, transform 0.4s ease-out;
+  transform: translate(-50%, -50%);
 }
 
 .close {
@@ -157,7 +156,6 @@ li {
 
 .slider-CV .slider {
   display: flex;
-  animation: slider 12s infinite ease-in-out;
 }
 
 .slider-CV img {
@@ -180,32 +178,6 @@ a:hover {
 .github:hover {
   opacity: 0.5;
 }
-
-/* 
-.modal-container.active {
-  visibility: visible;
-}
-
-.modal-container.active .overlay {
-  opacity: 1;
-  transition: opacity 0.4s ease-out;
-}
-
-.modal-container.active .modal {
-  opacity: 1;
-  transform: translate(-50%, -50%);
-  transition: opacity 0.4s 0.2s ease-out, transform 0.4s ease-out;
-} */
-
-/* .modal-fade-enter,
-.modal-fade-leave-to {
-  opacity: 0;
-}
-
-.modal-fade-enter-active,
-.modal-fade-leave-active {
-  transition: opacity .5s ease;
-} */
 
 @keyframes slider {
 

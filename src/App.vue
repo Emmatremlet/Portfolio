@@ -38,16 +38,16 @@ console.log(showModal)
             <div id="CV">
               <div v-if="showModal">
                     <Modal @close="toggleModal" />
-                </div>
-                <button type="button" class="modal-btn modal-trigger-CV" @click="toggleModal" >
-                    <img src=./assets/Images/CV.png alt="Photo d'un CV réalisé en site web" id="CV_image">
-                    <h3 id="Cv_title">Curriculum Vitae</h3>
-                </button>
+              </div>
+              <button type="button" class="modal-btn modal-trigger-CV" @click="toggleModal" >
+                  <img src=./assets/Images/CV.png alt="Photo d'un CV réalisé en site web" id="creation_image">
+                  <h3 id="Cv_title">Curriculum Vitae</h3>
+              </button>
             </div>
             <div id="specifications">
                 <button class="modal-btn modal-trigger-specifications">
                     <img src=./assets/Images/CahierDesCharges.png
-                        alt="Photo d'un extrait d'un cahier des charges d'un projet fictif" id="specifications_image">
+                        alt="Photo d'un extrait d'un cahier des charges d'un projet fictif" id="creation_image">
                     <h3 id="specifications_title">Cahier des charges fictif</h3>
                 </button>
                 <!-- <div v-if="showModal">
@@ -89,7 +89,7 @@ console.log(showModal)
             <div id="comments_space">
                 <button class="modal-btn modal-trigger-comments-space">
                     <img src=./assets/Images/EspaceDeComments.png alt="Photo d'un espace de commentaires dynamique"
-                        id="comments_space_image">
+                        id="creation_image">
                     <h3 id="comments_space_title">Espace de commentaires dynamique</h3>
                 </button>
                 <!-- <div v-if="showModal">
@@ -313,7 +313,7 @@ button {
     order: 1;
 }
 
-#creations button:hover {
+.modal-btn:hover {
     box-shadow: 7px 7px 10px 1px #EBC999;
     cursor: pointer;
 }
@@ -354,7 +354,7 @@ button {
     padding-left: 2%;
 }
 
-#creations img {
+#creation_image {
     width: 250px;
     margin: 10px;
     border: solid;
