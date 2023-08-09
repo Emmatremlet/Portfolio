@@ -5,12 +5,12 @@ import Footer from './components/Footer.vue'
 import Modal from './components/Modal.vue'
 import Presentation from './components/Presentation.vue'
 import Contact from './components/Contact.vue'
+import {ref} from 'vue'
 
-
-var showModal = false
+var showModal = ref(false)
 
 function toggleModal() {
-    showModal = !showModal
+    showModal.value = !showModal.value
 }
 
 console.log(showModal)
@@ -50,7 +50,7 @@ console.log(showModal)
                         alt="Photo d'un extrait d'un cahier des charges d'un projet fictif" id="specifications_image">
                     <h3 id="specifications_title">Cahier des charges fictif</h3>
                 </button>
-                <div v-if="showModal">
+                <!-- <div v-if="showModal">
                     <Modal>
 
                         <template #title>Cahier des Charges fictif</template>
@@ -83,8 +83,8 @@ console.log(showModal)
                                 href="./assets/Documents/Cahier_des_charges_La_Socketterie.pdf">Lien
                                 PDF</a>
                         </template>
-                    </Modal>
-                </div>
+                    </Modal> -->
+                <!-- </div> -->
             </div>
             <div id="comments_space">
                 <button class="modal-btn modal-trigger-comments-space">
@@ -92,7 +92,7 @@ console.log(showModal)
                         id="comments_space_image">
                     <h3 id="comments_space_title">Espace de commentaires dynamique</h3>
                 </button>
-                <div v-if="showModal">
+                <!-- <div v-if="showModal">
                     <Modal>
                         <template v-slot:header>
                             <h2>Espace de Commentaires dynamique</h2>
@@ -130,7 +130,7 @@ console.log(showModal)
                                 Github</a>
                         </template>
                     </Modal>
-                  </div>
+                  </div> -->
             </div>
           </div>
       </div>
