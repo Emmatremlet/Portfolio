@@ -14,10 +14,11 @@ import Footer from './Footer.vue';
         </div>
 
         <h1 class="not-found">404 — Not Found</h1>
-
+        <RouterLink to="/">Retourner à la page d'acceuil</RouterLink>
 
         <Footer></Footer>
     </div>
+    <RouterView></RouterView>
 </template>
 
 

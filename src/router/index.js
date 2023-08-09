@@ -8,15 +8,11 @@ import Contact from '../components/Contact.vue'
 import App from '../App.vue'
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL),
+  history: createWebHistory(),
   routes: [
     {
       path: "/",
       component: App,
-    },
-    {
-      path: "/:pathMatch(.*)*",
-      component: NotFound,
     },
     {
       path: "/Header",
@@ -38,7 +34,14 @@ const router = createRouter({
       path: "/Footer",
       component: Footer,
     },
+    {
+      path: "/:pathMatch(.*)*",
+      name:'NotFound',
+      component: NotFound,
+    },
   ]
 })
+
+
 
 export default router

@@ -240,7 +240,7 @@ console.log(showModal)
   padding: 0 30px;
   padding-bottom: 20px;
   color: black;
-  background-color: #9ac8eb;
+  background-color: #8CA9D3;
   font-family: "Manrope", sans-serif;
   line-height: 1.5;
   cursor: default;
@@ -262,7 +262,7 @@ h1 {
 }
 
 h2 {
-  background-color: #ff9cb6;
+  background-color: #F26659;
   line-height: 1;
   padding: 5px;
   color: black;
@@ -298,7 +298,7 @@ button {
 }
 
 .modal-btn {
-    background-color: #9ac8eb;
+    background-color: #8CA9D3;
     font-size: 18px;
     border: none;
     cursor: pointer;
@@ -314,7 +314,7 @@ button {
 }
 
 #creations button:hover {
-    box-shadow: 7px 7px 10px 1px #feeaa1;
+    box-shadow: 7px 7px 10px 1px #EBC999;
     cursor: pointer;
 }
 
@@ -359,7 +359,7 @@ button {
     margin: 10px;
     border: solid;
     border-width: 3px;
-    border-color: #feeaa1;
+    border-color: #EBC999;
 }
 
 
@@ -371,7 +371,7 @@ a {
 }
 
 a:hover {
-  background-color: #9ac8eb;
+  background-color: #8CA9D3;
   text-decoration: underline;
   color: plum;
 }

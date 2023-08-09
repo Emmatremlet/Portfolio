@@ -1,15 +1,37 @@
+<script setup>
+
+let firstName = document.getElementById("first-name_box");
+let lastName = document.getElementById("last-name_box");
+let email = document.getElementById("email_box");
+let object = document.getElementById("object_box");
+let comment = document.getElementById("comments");
+
+function submitValue() {
+
+//On modifie les valeurs des champs de texte pour les rendre vide
+firstName.value = "";
+lastName.value = "";
+email.value = "";
+object.value = "";
+comment.value = "";
+}
+
+</script>
+
+
+
 <template>
     <div class="body">
         <h2 id="contact_title">Contact</h2>
         <form method="post" id="contact_form">
             <div id="id">
                 <div id="first-name">
-                    <label for="first-name_box" id="first-name_label">Prénom :</label>
-                    <input type="text" id="first-name_box" name="first-name" placeholder="Votre prénom" required>
+                    <label for="first-name_box" id="first-name_label" >Prénom :</label>
+                    <input type="text" id="first-name_box" name="firstName" placeholder="Votre prénom"  required>
                 </div>
                 <div id="last-name">
                     <label for="last-name_box" id="last-name_label">Nom :</label>
-                    <input type="text" id="last-name_box" name="last-name" placeholder="Votre nom" required>
+                    <input type="text" id="last-name_box" name="lastName" placeholder="Votre nom"  required>
                 </div>
             </div>
             <div id="email">
@@ -25,10 +47,9 @@
                 <span id="comments-max">Max. 500 caractères</span>
                 <textarea id="comments" name="comments" placeholder="Votre message" rows="4" maxlength="500"
                     required></textarea>
-                <p id="error-message"><strong> Tous les champs doivent être remplis</strong></p>
             </div>
             <div id="submit_block">
-                <button type="submit" id="submit">
+                <button type="submit" id="submit" @click="submitValue()">
                     Envoyer
                 </button>
             </div>
@@ -70,7 +91,7 @@ button {
 }
 
 #submit {
-    background-color: #feeaa1;
+    background-color: #ebc999;
     font-size: 16px;
     margin-left: 89%;
     margin-top: 30px;
@@ -131,13 +152,4 @@ textarea {
     border-width: 2px;
 }
 
-#error-message {
-    display: none;
-    order: 4;
-    line-height: 1;
-    padding: 10px;
-    background-color: #ff9cb6;
-    color: red;
-    border-radius: 10px;
-}
 </style>

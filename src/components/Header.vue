@@ -35,7 +35,7 @@
 <style scoped>
 
 header {
-  background-color: #feeaa1;
+  background-color: #EBC999;
   font-size: 17px;
   width: 990px;
   height: 70px;
@@ -81,8 +81,8 @@ header {
   width: 50px;
   margin-top: 2px;
   margin-right: 20px;
-  border: 3px #dbc2a4;
-  box-shadow: 0px 0px 10px #dbc2a4;
+  border: 3px #EBC999;
+  box-shadow: 0px 0px 10px #EBC999;
   cursor: pointer;
 }
 
@@ -94,7 +94,7 @@ header {
 .header a {
   text-decoration: none;
   margin-top: 5px;
-  background-color: #feeaa1;
+  background-color: #EBC999;
 }
 
 a:hover {
