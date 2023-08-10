@@ -7,7 +7,7 @@
       </a>
       <a href="https://github.com/Emmatremlet">
         <img src=../assets/Images/github.png alt="Profil GitHub Emma TREMLET" class="image"> <br>
-        <p class="github">GitHub</p>
+        <p id="github">GitHub</p>
       </a>
     </div>
     <p class="maj">Mis à jour le 08/08/2023</p>
@@ -51,7 +51,7 @@ a:hover {
   font-size: small;
 }
 
-.github {
+#github {
   margin-left: 7px;
 }
 

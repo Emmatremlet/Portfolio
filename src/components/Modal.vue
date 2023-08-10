@@ -19,7 +19,7 @@ function closeModal() {
         </slot>
       </h2>
       <div class="body-modal">
-        <div class="slider-container slider-CV">
+        <div class="slider-container">
           <div class="slider">
             <slot name="slider">
               <img class="img-modal" src=../assets/Images/CV.png alt="Photo d'un CV réalisé en site web">
@@ -33,7 +33,7 @@ function closeModal() {
         <div class="details-modal">
           <slot name="details" class="details-modal">
             <br>
-            <p class="creation-date date-CV"><i>Fait le 27/06/2023</i></p> <br> <br>
+            <p class="creation-date"><i>Fait le 27/06/2023</i></p> <br> <br>
             <div class="technologies-used">
               <h4>Technologies utilisées :</h4>
               <ul>
@@ -54,7 +54,7 @@ function closeModal() {
   </div>
 </template>
 
-<style scoped>
+<style>
 .modal {
   font-family: "Manrope", sans-serif;
   line-height: 1.5;
@@ -89,7 +89,7 @@ function closeModal() {
   max-width: 800px;
   min-width: 300px;
   padding: 30px;
-  background: #fff;
+  background: #f0eff4;
   border-radius: 5px;
   position: absolute;
   top: 48%;
@@ -107,7 +107,7 @@ function closeModal() {
   right: 10px;
   cursor: pointer;
   background-color: #ff365e;
-  color: #fff;
+  color: #f0eff4;
 }
 
 .modal h2 {
@@ -139,32 +139,33 @@ li {
 
 .technologies-used {
   border: solid;
-  border-color: #ff9cb6;
+  border-color: #F26659;
   padding: 20px;
   padding-top: 10px;
   margin-top: 10px;
 }
 
-.slider-CV {
+.slider-container {
   width: 500px;
   margin: 20px;
   border: solid;
   border-width: 3px;
-  border-color: #feeaa1;
+  border-color: #EBC999;
   overflow: hidden;
 }
 
-.slider-CV .slider {
+.slider-container .slider {
   display: flex;
+  animation: slider 12s infinite ease-in-out;
 }
 
-.slider-CV img {
+.img-modal {
   flex-shrink: 0;
   width: 100%;
 }
 
-a:hover {
-  background-color: #fff;
+.link:hover {
+  background-color: #f0eff4;
   text-decoration: underline;
   color: plum;
 }
@@ -176,6 +177,16 @@ a:hover {
 }
 
 .github:hover {
+  opacity: 0.5;
+}
+
+.PDF {
+  width: 35px;
+  margin: 10px;
+  opacity: 1;
+}
+
+.PDF:hover {
   opacity: 0.5;
 }
 

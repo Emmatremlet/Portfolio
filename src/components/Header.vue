@@ -16,17 +16,17 @@
     </div>
     <div class="presentation-header">
       <a href="#welcome">
-        <nav class="link"> Présentation </nav>
+        <nav id="link"> Présentation </nav>
       </a>
     </div>
     <div class="creation-header">
       <a href="#creation-block">
-        <nav class="link"> Créations </nav>
+        <nav id="link"> Créations </nav>
       </a>
     </div>
     <div class="contact-header">
       <a href="#contact">
-        <nav class="link"> Contact </nav>
+        <nav id="link"> Contact </nav>
       </a>
     </div>
   </header>
@@ -70,7 +70,7 @@ header {
   order: 4;
 }
 
-.link {
+#link {
   padding: 0;
   text-decoration: none;
   margin: 0;
