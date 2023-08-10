@@ -13,7 +13,10 @@ function toggleModal() {
     showModal.value = !showModal.value
 }
 
-console.log(showModal)
+
+function mounted() {
+    console.log(process.env.VUE_APP_ROOT_API)
+  }
 </script>
 
 

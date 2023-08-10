@@ -1,22 +1,45 @@
-<script setup>
+<script>
+import emailjs from 'emailjs-com'
 
-let firstName = document.getElementById("first-name_box");
-let lastName = document.getElementById("last-name_box");
-let email = document.getElementById("email_box");
-let object = document.getElementById("object_box");
-let comment = document.getElementById("comments");
+export default {
+  name: 'Contact',
+  data() {
+    return {
+        firstName: '',
+        lastName: '',
+        email: '',
+        obejct:'',
+        comments: ''
+    }
+  },
+  methods: {
+    sendEmail() {
+      try {
+        emailjs.sendForm('service_ptlbqr8', 'template_16vskto',
+        '-zAyczA1-KABOJJnO', {
+            firstName: this.firstName,
+            lastName: this.lastName,
+            email: this.email,
+            object: this.object,
+            comments: this.comments
+        })
 
-function submitValue() {
-
-//On modifie les valeurs des champs de texte pour les rendre vide
-firstName.value = "";
-lastName.value = "";
-email.value = "";
-object.value = "";
-comment.value = "";
+      } catch(error) {
+          console.log({error})
+      }
+      // Reset form field
+            this.firstName = '',
+            this.lastName = '',
+            this.email = '',
+            this.object='',
+            this.comments= ''
+    },
+  }
 }
-
 </script>
+
+
+
 
 
 
@@ -27,29 +50,29 @@ comment.value = "";
             <div id="id">
                 <div id="first-name">
                     <label for="first-name_box" id="first-name_label" >Prénom :</label>
-                    <input type="text" id="first-name_box" name="firstName" placeholder="Votre prénom"  required>
+                    <input type="text" id="first-name_box" name="firstName" placeholder="Votre prénom" v-model="firstName" required>
                 </div>
                 <div id="last-name">
                     <label for="last-name_box" id="last-name_label">Nom :</label>
-                    <input type="text" id="last-name_box" name="lastName" placeholder="Votre nom"  required>
+                    <input type="text" id="last-name_box" name="lastName" placeholder="Votre nom" v-model="lastName" required>
                 </div>
             </div>
             <div id="email">
                 <label for="email_box" id="email_label">Adresse e-mail :</label>
-                <input type="email" id="email_box" name="email" placeholder="NomPrenom@gmail.com" key="email-input" required>
+                <input type="email" id="email_box" name="email" placeholder="NomPrenom@gmail.com" key="email-input" v-model="email" required>
             </div>
             <div id="object">
                 <label for="object_box" id="object_label"> Objet :</label>
-                <input type="text" id="object_box" name="object" placeholder="Le sujet de votre message" required>
+                <input type="text" id="object_box" name="object" placeholder="Le sujet de votre message" v-model="object" required>
             </div>
             <div id="comments_block">
                 <label id="comments_label" for="comments">Commentaire : </label>
                 <span id="comments-max">Max. 500 caractères</span>
-                <textarea id="comments" name="comments" placeholder="Votre message" rows="4" maxlength="500"
+                <textarea id="comments" name="comments" placeholder="Votre message" rows="4" maxlength="500" v-model="comments"
                     required></textarea>
             </div>
             <div id="submit_block">
-                <button type="submit" id="submit" @click="submitValue()">
+                <button type="submit" id="submit" @click="sendEmail()">
                     Envoyer
                 </button>
             </div>
