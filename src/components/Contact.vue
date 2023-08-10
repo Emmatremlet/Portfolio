@@ -13,9 +13,9 @@ export default {
     }
   },
   methods: {
-    sendEmail() {
+    sendEmail(e) {
       try {
-        emailjs.sendForm('service_ptlbqr8', 'template_16vskto',
+        emailjs.sendForm('service_ptlbqr8', 'template_16vskto', e.target,
         '-zAyczA1-KABOJJnO', {
             firstName: this.firstName,
             lastName: this.lastName,
@@ -46,7 +46,7 @@ export default {
 <template>
     <div class="body">
         <h2 id="contact_title">Contact</h2>
-        <form method="post" id="contact_form">
+        <form method="post" id="contact_form" @submit.prevent="sendEmail">
             <div id="id">
                 <div id="first-name">
                     <label for="first-name_box" id="first-name_label" >Prénom :</label>
@@ -72,7 +72,7 @@ export default {
                     required></textarea>
             </div>
             <div id="submit_block">
-                <button type="submit" id="submit" @click="sendEmail()">
+                <button type="submit" id="submit">
                     Envoyer
                 </button>
             </div>

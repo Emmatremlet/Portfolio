@@ -39,9 +39,9 @@ a {
 }
 
 a:hover {
-  background-color: #9ac8eb;
+  background-color: #8ca9d3;
   text-decoration: underline;
-  color: plum;
+  color: #f0eff4;
 }
 
 .maj {
