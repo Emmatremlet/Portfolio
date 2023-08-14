@@ -10,7 +10,7 @@
         <p id="github">GitHub</p>
       </a>
     </div>
-    <p class="maj">Mis à jour le 08/08/2023</p>
+    <p class="maj">Mis à jour le 11/08/2023</p>
   </div>
 </template>
 

@@ -9,10 +9,14 @@ export default {
         lastName: '',
         email: '',
         obejct:'',
-        comments: ''
+        comments: '',
+        showAlert: false
     }
   },
-  methods: {
+    methods: {
+    closeAlert() {
+        this.showAlert = false
+    },
     sendEmail(e) {
       try {
         emailjs.sendForm('service_ptlbqr8', 'template_16vskto', e.target,
@@ -24,16 +28,18 @@ export default {
             comments: this.comments
         })
 
+        this.showAlert = true,
+        setTimeout(this.closeAlert, 3000);
+
       } catch(error) {
           console.log({error})
       }
-      // Reset form field
             this.firstName = '',
             this.lastName = '',
             this.email = '',
             this.object='',
-            this.comments= ''
-    },
+            this.comments = ''
+      },
   }
 }
 </script>
@@ -71,6 +77,9 @@ export default {
                 <textarea id="comments" name="comments" placeholder="Votre message" rows="4" maxlength="500" v-model="comments"
                     required></textarea>
             </div>
+            <p  class="alerte" v-if="showAlert">
+                Votre message est parti ! 
+            </p>
             <div id="submit_block">
                 <button type="submit" id="submit">
                     Envoyer
@@ -153,6 +162,7 @@ input {
     font-size: medium;
     border-color: black;
     margin-left: 20px;
+    background-color: #fff;
 }
 
 #email_box {
@@ -173,6 +183,18 @@ textarea {
     border-radius: 10px;
     border-color: black;
     border-width: 2px;
+}
+.alerte{
+    background-color: #8CA9D3;
+    color : black;
+    font-family: "Edu_Sa_beginner", sans-serif;
+    font-weight: 400;
+    font-size: 28px;
+    margin-left: 28%;
+    width: 400px;
+    height: 80px;
+    text-align: center;
+    
 }
 
 </style>

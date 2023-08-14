@@ -167,7 +167,7 @@ li {
 .link:hover {
   background-color: #f0eff4;
   text-decoration: underline;
-  color: plum;
+  color: #ff365e;
 }
 
 .github {

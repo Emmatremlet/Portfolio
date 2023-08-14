@@ -29,7 +29,7 @@ import Footer from './Footer.vue';
     height: 100vh;
     margin: 0 auto;
     padding: 0 30px;
-    background-color: #9ac8eb;
+    background-color: #8CA9D3;
     font-family: "Manrope", sans-serif;
     line-height: 1.5;
     cursor: default;
@@ -52,4 +52,5 @@ import Footer from './Footer.vue';
     width: 150px;
     border: 3px #dbc2a4;
     box-shadow: 0px 0px 10px #dbc2a4;
-}</style>
+}
+</style>

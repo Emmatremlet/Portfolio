@@ -1,4 +1,8 @@
+<script setup>
 
+
+
+</script>
 
 <template>
   <header>
@@ -14,17 +18,17 @@
         <i>Développeuse Web</i>
       </div>
     </div>
-    <div class="presentation-header">
+    <div class="presentation-header" v-bind:class="{ active: isActive }">
       <a href="#welcome">
         <nav id="link"> Présentation </nav>
       </a>
     </div>
-    <div class="creation-header">
+    <div class="creation-header" v-bind:class="{ active: isActive }">
       <a href="#creation-block">
         <nav id="link"> Créations </nav>
       </a>
     </div>
-    <div class="contact-header">
+    <div class="contact-header" v-bind:class="{ active: isActive }">
       <a href="#contact">
         <nav id="link"> Contact </nav>
       </a>
@@ -100,5 +104,9 @@ header {
 a:hover {
   text-decoration: underline;
   color: black;
+}
+
+.menuselected{
+  text-decoration: underline;
 }
 </style>

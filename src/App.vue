@@ -5,7 +5,7 @@ import Footer from './components/Footer.vue'
 import Modal from './components/Modal.vue'
 import Presentation from './components/Presentation.vue'
 import Contact from './components/Contact.vue'
-import {ref} from 'vue'
+import { ref } from 'vue'
 
 var showModalCV = ref(false)
 
@@ -24,11 +24,7 @@ var showModalCommentsSpace = ref(false)
 function toggleModalCommentsSpace() {
   showModalCommentsSpace.value = !showModalCommentsSpace.value
 }
-
-
-function mounted() {
-    console.log(process.env.VUE_APP_ROOT_API)
-  }
+  
 </script>
 
 
@@ -37,7 +33,6 @@ function mounted() {
   <div class="body">
     <Header></Header>
     <div id="welcome">
-      <br>
       <Presentation/>
       <br>
       <br>
@@ -59,6 +54,8 @@ function mounted() {
                   <h3 id="Cv_title">Curriculum Vitae</h3>
               </button>
             </div>
+
+
             <div id="specifications">
                 <button type ="button" class="modal-btn modal-trigger-specifications" @click="toggleModalSpecifications">
                     <img src=./assets/Images/CahierDesCharges.png
@@ -105,6 +102,8 @@ function mounted() {
                     </Modal>
                 </div>
             </div>
+
+
             <div id="comments_space">
                 <button class="modal-btn modal-trigger-comments-space" @click="toggleModalCommentsSpace">
                     <img src=./assets/Images/EspaceDeComments.png alt="Photo d'un espace de commentaires dynamique"
@@ -113,11 +112,9 @@ function mounted() {
                 </button>
                 <div v-if="showModalCommentsSpace">
                     <Modal @close="toggleModalCommentsSpace">
-                        <template v-slot:header>
-                            <h2>Espace de Commentaires dynamique</h2>
-                        </template>
+                        <template #title>Espace de Commentaires dynamique</template>
 
-                        <template v-slot:body>
+                        <template #slider>
                             <div class="slider">
                                 <img class="img-modal" src=./assets/Images/EspaceDeComments.png
                                     alt="Photo d'un espace de commentaires dynamique">
@@ -132,7 +129,7 @@ function mounted() {
                             </div>
                         </template>
 
-                        <template v-slot:footer>
+                        <template #details>
                             <p class="creation-date date-comments-space"> <i>Fait le 20/07/2023</i> </p>
                             <div class="technologies-used">
                                 <h4>Technologies utilisées :</h4>
@@ -146,7 +143,7 @@ function mounted() {
                             <br>
                             <a class="link comments-space-link"
                                 href="https://github.com/Emmatremlet/DynamiserUnEspaceDeCommentaire">
-                                <img src=../assets/Images/github.svg alt="Profil GitHub Emma TREMLET" class="github"> <br>
+                                <img src=./assets/Images/github.svg alt="Profil GitHub Emma TREMLET" class="github"> <br>
                                 <p class="github-title">GitHub</p>
                             </a>
                         </template>
