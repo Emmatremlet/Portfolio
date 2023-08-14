@@ -10,7 +10,7 @@
         <p id="github">GitHub</p>
       </a>
     </div>
-    <p class="maj">Mis à jour le 11/08/2023</p>
+    <p class="maj">Mis à jour le 14/08/2023</p>
   </div>
 </template>
 
@@ -20,12 +20,12 @@
   order: 4;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   flex-basis: auto;
 }
 
 .networks {
   order: 1;
+  margin-right:4%;
   margin-top: 50px;
   display: flex;
   flex-direction: row;
@@ -46,7 +46,7 @@ a:hover {
 
 .maj {
   order: 2;
-  margin-left: 42%;
+  margin-left: 41%;
   margin-top: 30px;
   font-size: small;
 }

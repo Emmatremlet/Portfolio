@@ -1,8 +1,4 @@
 
-
-
-
-
 <template>
     <div class="body">
         <h2 id="presentation_title">Presentation</h2>
@@ -12,12 +8,14 @@
             <h1>Emma Tremlet</h1>
         </div>
         <div class="presentation-block">
-            <a href='../assets/Images/Photo_de_profil.JPG' @click=""><img src=../assets/Images/Photo_de_profil.JPG
-                    alt="Photo d'une femme chatain qui sourit" class="Photo-De-Profil"></a>
+            <a href='../assets/Images/Photo_de_profil.JPG'>
+                <img src=../assets/Images/Photo_de_profil.JPG
+                    alt="Photo d'une femme chatain qui sourit" class="Photo-De-Profil">
+            </a>
             <p class="presentation">
                 Suite à ma formation en ligne,
                 <br>
-                j'ai obtenu le dipôme de <strong>développeur web full-stack.</strong>
+                j'ai obtenu le dipôme de <strong> développeur web full-stack. </strong>
                 <br>
                 <br>
                 Grâce à mon école d'ingénieur en cognitique,
@@ -31,6 +29,9 @@
         </div>
     </div>
 </template>
+
+
+
 
 <style scoped>
 
@@ -59,11 +60,10 @@
     width: 200px;
     border-radius: 50%;
     box-shadow: 0 0 10px #feeaa1;
-    cursor: none;
 }
 
 .Photo-De-Profil:hover {
-    cursor: zoom-in;
+    cursor: default;
     background-color: #9ac8eb;
 }
 
