@@ -1,4 +1,5 @@
 <script setup>
+import { RouterLink, RouterView} from 'vue-router';
 import Header from './Header.vue';
 import Footer from './Footer.vue';
 </script>
@@ -6,19 +7,20 @@ import Footer from './Footer.vue';
 
 <template>
     <div class="body">
-        <Header></Header>
+        <RouterView>
+            <Header></Header>
 
-        <div class="logo-404">
-            <img src="../assets/Images/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
-                class="logo">
-        </div>
+            <div class="logo-404">
+                <img src="../assets/Images/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
+                    class="logo">
+            </div>
 
-        <h1 class="not-found">404 — Not Found</h1>
-        <RouterLink to="/">Retourner à la page d'acceuil</RouterLink>
+            <h1 class="not-found">404 — Not Found</h1>
+            <RouterLink to="/">Retourner à la page d'acceuil</RouterLink>
 
-        <Footer></Footer>
+            <Footer></Footer>
+        </RouterView>
     </div>
-    <RouterView></RouterView>
 </template>
 
 

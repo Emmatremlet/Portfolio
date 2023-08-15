@@ -7,41 +7,28 @@ import Presentation from '../components/Presentation.vue'
 import Contact from '../components/Contact.vue'
 import App from '../App.vue'
 
+
+const routes = [
+  {
+    path: "/",
+      name: "Accueil",
+      component: App,
+  },
+  {
+    path: "/404",
+    name:'NotFound',
+    component: NotFound,
+  },
+  {
+    path: "/:catchAll(.*)",
+    redirect: "/404",
+  }
+]
+
 const router = createRouter({
   history: createWebHistory(),
-  routes: [
-    {
-      path: "/",
-      component: App,
-    },
-    {
-      path: "/Header",
-      component: Header,
-    },
-    {
-      path: "/Presentation",
-      component: Presentation,
-    },
-    {
-      path: "/Modal",
-      component: Modal,
-    },
-    {
-      path: "/Contact",
-      component: Contact,
-    },
-    {
-      path: "/Footer",
-      component: Footer,
-    },
-    {
-      path: "/:pathMatch(.*)*",
-      name:'NotFound',
-      component: NotFound,
-    },
-  ]
+  routes,
 })
-
 
 
 export default router

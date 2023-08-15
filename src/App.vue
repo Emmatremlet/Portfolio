@@ -165,7 +165,7 @@ function toggleModalCommentsSpace() {
     <Footer></Footer>
   </div>
 </RouterView>
-  <RouterLink></RouterLink>
+  <!-- <RouterLink></RouterLink> -->
 </template>
 
 <style>
