@@ -1,3 +1,11 @@
+<script>
+import { RouterLink } from 'vue-router'
+
+export default {
+    name: 'Presentation',
+}
+
+</script>
 
 <template>
     <div class="body">
@@ -8,10 +16,10 @@
             <h1>Emma Tremlet</h1>
         </div>
         <div class="presentation-block">
-            <a href='../assets/Images/Photo_de_profil.JPG'>
+            <RouterLink to='/PhotoDeProfil'>
                 <img src=../assets/Images/Photo_de_profil.JPG
                     alt="Photo d'une femme chatain qui sourit" class="Photo-De-Profil">
-            </a>
+            </RouterLink>
             <p class="presentation">
                 Suite à ma formation en ligne,
                 <br>
@@ -63,7 +71,7 @@
 }
 
 .Photo-De-Profil:hover {
-    cursor: default;
+    cursor: zoom-in;
     background-color: #9ac8eb;
 }
 

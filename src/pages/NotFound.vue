@@ -1,7 +1,7 @@
 <script setup>
 import { RouterLink, RouterView} from 'vue-router';
-import Header from './Header.vue';
-import Footer from './Footer.vue';
+import Header from '../components/Header.vue';
+import Footer from '../components/Footer.vue';
 </script>
 
 
@@ -11,12 +11,17 @@ import Footer from './Footer.vue';
             <Header></Header>
 
             <div class="logo-404">
-                <img src="../assets/Images/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
+                <img src="../../public/favicon.ico" alt="Image fond bleu avec les lettres E et T avec des contours jaunes"
                     class="logo">
             </div>
 
             <h1 class="not-found">404 — Not Found</h1>
-            <RouterLink to="/">Retourner à la page d'acceuil</RouterLink>
+
+            <br>
+            <br>
+
+            <RouterLink class="home" to="/">Retourner à la page d'acceuil</RouterLink>
+            
 
             <Footer></Footer>
         </RouterView>
@@ -26,16 +31,6 @@ import Footer from './Footer.vue';
 
 <style scoped>
 
-#body-404 {
-    width: 1000px;
-    height: 100vh;
-    margin: 0 auto;
-    padding: 0 30px;
-    background-color: #8CA9D3;
-    font-family: "Manrope", sans-serif;
-    line-height: 1.5;
-    cursor: default;
-}
 
 .logo-404 {
     display: flex;
@@ -55,4 +50,16 @@ import Footer from './Footer.vue';
     border: 3px #dbc2a4;
     box-shadow: 0px 0px 10px #dbc2a4;
 }
+
+.home{
+    padding-top:100px;
+    margin-left:40%;
+}
+
+.home:hover{
+    background-color:transparent;
+    color:#f0eff4;
+}
+
+
 </style>
